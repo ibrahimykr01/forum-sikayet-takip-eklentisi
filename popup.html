@@ -2,35 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { width: 320px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: #fdfdfd; }
-    h3 { margin: 0 0 15px 0; color: #333; font-size: 18px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-    .btn-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
-    button { cursor: pointer; border: none; padding: 10px; border-radius: 6px; font-weight: bold; color: white; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.2s; }
-    #saveBtn { background: #e74c3c; }
-    #saveBtn:hover { background: #c0392b; }
-    #exportBtn { background: #27ae60; }
-    #exportBtn:hover { background: #219150; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li { background: white; border: 1px solid #eee; border-radius: 8px; padding: 10px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .topic-title { font-size: 13px; font-weight: 600; color: #2980b9; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.4; }
-    .footer-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f5f5f5; pt: 8px; margin-top: 5px; }
-    .status-tag { font-size: 11px; color: #7f8c8d; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
-    .share-actions { display: flex; gap: 10px; }
-    .share-link { font-size: 16px; cursor: pointer; transition: 0.2s; }
-    .wa { color: #25D366; }
-    .tw { color: #000; }
-    .share-link:hover { transform: scale(1.2); }
+    body { width: 350px; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; margin: 0; }
+    .header { background: #1a2a3a; color: white; padding: 15px; text-align: center; font-weight: bold; border-bottom: 3px solid #f39c12; }
+    .container { padding: 12px; }
+    button { width: 100%; padding: 12px; margin-bottom: 10px; cursor: pointer; border-radius: 8px; border: none; font-weight: bold; }
+    #saveBtn { background: #f39c12; color: white; font-size: 14px; }
+    .sec-btns { display: flex; gap: 8px; margin-bottom: 10px; }
+    .sec-btns button { background: #6c757d; color: white; font-size: 11px; padding: 8px; }
+    .card { background: white; padding: 12px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid #f39c12; }
+    .t-title { font-size: 13px; font-weight: bold; color: #2c3e50; text-decoration: none; display: block; margin-bottom: 6px; }
+    .user-info { font-size: 11px; color: #555; margin: 2px 0; }
+    .share-row { margin-top: 10px; padding-top: 8px; border-top: 1px solid #eee; display: flex; gap: 15px; align-items: center; }
+    .share-link { font-size: 11px; text-decoration: none; font-weight: bold; }
+    .del-btn { margin-left: auto; cursor: pointer; font-size: 16px; color: #e74c3c; }
   </style>
 </head>
 <body>
-  <h3><i class="fas fa-shield-alt"></i> Şikayet Takip</h3>
-  <div class="btn-group">
-    <button id="saveBtn"><i class="fas fa-plus-circle"></i> Bu Konuyu Takip Et</button>
-    <button id="exportBtn"><i class="fas fa-file-excel"></i> Excel'e Aktar</button>
+  <div class="header">R10 GÖZCÜ </div>
+  <div class="container">
+    <button id="saveBtn">📌 KONUYU TAKİBE AL</button>
+    <div class="sec-btns">
+      <button id="exportBtn">📊 EXCEL AKTAR</button>
+      <button id="downloadChatBtn">📄 TXT ARŞİV</button>
+    </div>
+    <div id="list"></div>
   </div>
-  <ul id="list"></ul>
   <script src="popup.js"></script>
 </body>
 </html>
